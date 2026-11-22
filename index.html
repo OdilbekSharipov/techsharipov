@@ -3,144 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Techsharipov — IT va Kiberxavfsizlik</title>
+<meta name="robots" content="noindex">
+<title>Profilaktika ishlari — techsharipov.uz</title>
 <style>
-:root{--ink:#0b1b2b;--mut:#44586b;--glass:rgba(255,255,255,.42);--solid:rgba(255,255,255,.78);--edge:rgba(255,255,255,.7);--hi:rgba(255,255,255,.9);--sh:rgba(20,50,90,.18);--acc:#0a84ff;--bg1:#cfe6ff;--bg2:#ffd9e8;--bg3:#d5ffe9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eaf2fb;--mut:#a9bccf;--glass:rgba(30,40,60,.45);--solid:rgba(24,36,56,.86);--edge:rgba(255,255,255,.16);--hi:rgba(255,255,255,.25);--sh:rgba(0,0,0,.5);--acc:#64b5ff;--bg1:#0b2447;--bg2:#3a1738;--bg3:#0b3a33;color-scheme:dark}}
-:root[data-theme="dark"]{--ink:#eaf2fb;--mut:#a9bccf;--glass:rgba(30,40,60,.45);--solid:rgba(24,36,56,.86);--edge:rgba(255,255,255,.16);--hi:rgba(255,255,255,.25);--sh:rgba(0,0,0,.5);--acc:#64b5ff;--bg1:#0b2447;--bg2:#3a1738;--bg3:#0b3a33;color-scheme:dark}
-html{height:100%;scroll-behavior:smooth;scroll-padding-top:90px}
+:root{--ink:#0b1b2b;--mut:#44586b;--solid:rgba(255,255,255,.8);--glass:rgba(255,255,255,.45);--edge:rgba(255,255,255,.75);--sh:rgba(20,50,90,.2);--acc:#0a84ff;--b1:#cfe6ff;--b2:#ffd9e8;--b3:#d5ffe9;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--ink:#eaf2fb;--mut:#a9bccf;--solid:rgba(24,36,56,.88);--glass:rgba(30,40,60,.5);--edge:rgba(255,255,255,.18);--sh:rgba(0,0,0,.5);--acc:#64b5ff;--b1:#0b2447;--b2:#3a1738;--b3:#0b3a33;color-scheme:dark}}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;min-height:100%;position:relative;color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;background:var(--bg1)}
-.g{background:var(--solid);border:1px solid var(--edge);box-shadow:inset 0 1px 0 var(--hi),0 10px 30px var(--sh);border-radius:24px}
-h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.02em}
-:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-a{color:var(--acc)}
-#clock{font-variant-numeric:tabular-nums;font-weight:700;font-size:.92rem}
-#clock small{color:var(--mut);font-weight:600;margin-right:6px}
-.lang{display:flex;gap:3px}
-.lang button,.tb{border:0;background:transparent;color:var(--ink);font:inherit;font-size:.82rem;font-weight:700;padding:5px 10px;border-radius:999px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--acc);color:#fff}
-.hero{padding:44px 36px;margin-top:10px}
-.hero h1{font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;max-width:16ch}
-.hero p{max-width:56ch;color:var(--mut);margin:14px 0 0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.chips span{padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
-section{margin-top:34px}
-section>h2{font-size:1.5rem;margin:0 6px 6px}
-.lead{color:var(--mut);margin:0 6px 16px;max-width:64ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.card{padding:20px;border-radius:22px}
-.card .ic{font-size:1.6rem}
-.card h3{font-size:1.02rem;margin:8px 0 4px}
-.card p{margin:0;color:var(--mut);font-size:.92rem}
-details.c{border-radius:24px;margin-bottom:12px;overflow:hidden}
-details.c summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:18px 20px}
-details.c summary::-webkit-details-marker{display:none}
-details.c .ic{font-size:1.8rem}
-details.c .t{flex:1}
-details.c .t b{display:block;font-size:1.08rem}
-details.c .t span{color:var(--mut);font-size:.9rem}
-details.c summary::after{content:"+";font-size:1.5rem;font-weight:300;color:var(--acc)}
-details.c[open] summary::after{content:"–"}
-.body{padding:0 20px 20px;border-top:1px solid var(--edge)}
-.body p{color:var(--mut);margin:14px 0 8px}
-.body ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
-.body li{padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--edge);font-size:.92rem}
-.body .res{margin-top:12px;font-size:.9rem;font-weight:600}
-.btn{display:inline-block;background:var(--acc);color:#fff;border:0;padding:11px 20px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
-.btn.alt{background:var(--glass);color:var(--ink);border:1px solid var(--edge)}
-.tag{font-size:.75rem;font-weight:700;color:var(--acc)}
-input,textarea,select{padding:11px 13px;border-radius:14px;border:1px solid var(--edge);background:var(--glass);color:var(--ink);font:inherit}
-.fine{margin-top:40px;padding:18px 20px;font-size:.68rem;line-height:1.5;color:var(--mut);border-radius:18px}
-.fine b{color:var(--ink)}
-.fine p{margin:0 0 6px}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-main{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:12px 16px 40px}
-.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.ham{width:48px;height:48px;padding:0;border-radius:50%;display:grid;place-content:center;gap:5px;cursor:pointer;color:var(--ink)}
-.ham i{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
-.tr{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px}
-.splash{position:fixed;inset:0;z-index:60;display:none;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 76px) 20px calc(env(safe-area-inset-bottom,0px) + 24px);background:var(--glass);background:color-mix(in srgb,var(--bg1) 55%,transparent);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);overflow-y:auto}
-.splash.on{display:flex;animation:fi .25s}
-@keyframes fi{from{opacity:0}}
-.splash .x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:16px;width:46px;height:46px;border-radius:50%;border:1px solid var(--edge);background:var(--glass);color:var(--ink);font-size:1.1rem;cursor:pointer}
-.si{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:620px;width:100%;margin:auto}
-.si a{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:20px;color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
-.si a span:first-child{font-size:1.6rem}
-.icons{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-.icons[hidden]{display:none}
-.ico{display:flex;flex-direction:column;align-items:center;gap:4px;width:96px;padding:14px 8px;border-radius:20px;color:var(--ink);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
-.ico span{font-size:1.7rem}
-.chk{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.meter{height:10px;background:var(--edge);border-radius:6px;margin:14px 0 8px;overflow:hidden}
-.meter i{display:block;height:100%;width:0;background:#e5484d;transition:width .25s,background .25s}
-#verdict{font-weight:700;min-height:1.6em}
-#tips{margin:6px 0 0;padding-left:18px;color:var(--mut);font-size:.9rem}
-#pw{width:100%}
-.q{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:.94rem;cursor:pointer}
-.q input{margin-top:3px;width:18px;height:18px;padding:0;accent-color:var(--acc)}
-#qs{font-weight:700;margin-top:8px}
-#ckn{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(520px,calc(100% - 24px));padding:14px 16px;display:flex;gap:12px;align-items:center;z-index:45;font-size:.88rem;animation:up .5s}
-#ckn[hidden]{display:none}
-@keyframes up{from{transform:translate(-50%,30px);opacity:0}}
-@media(max-width:760px){.chk{grid-template-columns:1fr}}
-@media(max-width:640px){main{padding:12px}.hero{padding:28px 20px}.tr{gap:4px;padding:6px 8px}#clock small{display:none}}
-.bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(40vmax 40vmax at 15% 10%,var(--bg1),transparent 70%),radial-gradient(45vmax 45vmax at 90% 20%,var(--bg2),transparent 70%),radial-gradient(50vmax 50vmax at 60% 100%,var(--bg3),transparent 70%),radial-gradient(30vmax 30vmax at 20% 85%,#7cc0ff55,transparent 70%)}
-@supports((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.g{background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}}
+html,body{height:100%;margin:0}
+body{background:var(--b1);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;position:relative}
+.bg{position:fixed;inset:0;z-index:0;background:radial-gradient(45vmax 45vmax at 15% 10%,var(--b1),transparent 70%),radial-gradient(45vmax 45vmax at 90% 20%,var(--b2),transparent 70%),radial-gradient(50vmax 50vmax at 60% 100%,var(--b3),transparent 70%),radial-gradient(30vmax 30vmax at 20% 85%,#7cc0ff55,transparent 70%)}
+main{position:relative;z-index:1;min-height:100%;display:grid;place-items:center;padding:calc(env(safe-area-inset-top,0px) + 20px) 16px calc(env(safe-area-inset-bottom,0px) + 20px)}
+.card{width:min(560px,100%);text-align:center;padding:36px 24px;border-radius:32px;background:var(--solid);border:1px solid var(--edge);box-shadow:inset 0 1px 0 var(--edge),0 18px 50px var(--sh)}
+@supports((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.card{background:var(--glass);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}}
+.ic{font-size:3rem;line-height:1;display:inline-block;animation:sp 6s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+h1{font-size:clamp(1.5rem,6vw,2.1rem);margin:16px 0 8px;line-height:1.2;letter-spacing:-.02em}
+p{margin:0 auto;max-width:44ch;color:var(--mut)}
+.sub{font-size:.9rem;margin-top:14px}
+.bar{height:6px;border-radius:6px;background:var(--edge);margin:24px auto 0;max-width:260px;overflow:hidden}
+.bar i{display:block;height:100%;width:40%;border-radius:6px;background:var(--acc);animation:mv 1.8s ease-in-out infinite}
+@keyframes mv{0%{margin-left:-40%}100%{margin-left:100%}}
+.clock{margin-top:26px;padding:14px 18px;border-radius:22px;border:1px solid var(--edge);background:var(--glass)}
+#t{font-size:clamp(2rem,10vw,2.8rem);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+#d{color:var(--mut);font-size:.9rem}
+.z{font-size:.78rem;color:var(--mut);font-weight:700}
+.f{margin-top:22px;font-size:.8rem;color:var(--mut)}
+@media(prefers-reduced-motion:reduce){.ic,.bar i{animation:none}}
 </style>
 </head>
 <body>
 <div class="bg" aria-hidden="true"></div>
-<nav class="splash" id="nav" aria-label="Menu"></nav>
 <main>
-<div class="top"><button class="g ham" id="ham" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button><div class="tr g"><div id="clock" aria-label="GMT+5"></div><div class="lang" role="group" aria-label="Language"><button data-l="uz">UZ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div><button class="tb" id="th" aria-label="Theme">🌓</button></div></div>
-
-<div class="hero g" id="home">
-<h1 data-i="h1"></h1><p data-i="hp"></p>
-<div class="chips"><span class="g">Cybersecurity</span><span class="g">AI</span><span class="g">Networks</span><span class="g">Word</span><span class="g">Windows</span></div>
+<div class="card">
+<span class="ic" aria-hidden="true">⚙️</span>
+<h1>Saytda profilaktika ishlari olib borilmoqda</h1>
+<p>Tez orada mukammal yangi dizaynga ega saytimizni koʻrasiz. Sabringiz uchun rahmat!</p>
+<p class="sub" lang="ru">Ведутся профилактические работы. Скоро сайт вернётся с новым дизайном.</p>
+<p class="sub" lang="en">Maintenance in progress. We’ll be back soon with a new design.</p>
+<div class="bar" aria-hidden="true"><i></i></div>
+<div class="clock" role="timer" aria-label="GMT+5">
+<div class="z">GMT+5</div>
+<div id="t">--:--:--</div>
+<div id="d">&nbsp;</div>
 </div>
-
-<section id="work"><h2 data-i="tw"></h2><p class="lead" data-i="lw"></p><div class="grid" id="wg"></div></section>
-
-<section id="check"><h2 data-i="kt"></h2><p class="lead" data-i="ks"></p>
-<div class="chk g"><div><input id="pw" type="password" autocomplete="off" spellcheck="false" aria-label="Password"><div class="meter" aria-hidden="true"><i id="bar"></i></div><div id="verdict" aria-live="polite"></div><ul id="tips"></ul></div>
-<div><div id="ql"></div><div id="qs" aria-live="polite"></div></div></div></section>
-
-<section id="courses"><h2 data-i="tc"></h2><p class="lead" data-i="lc"></p><div id="cl"></div></section>
-
-<section id="extra"><h2 data-i="tx"></h2><p class="lead" data-i="lx"></p><div class="grid" id="xg"></div></section>
-
-<section id="contact"><h2 data-i="tt"></h2><p class="lead" data-i="lt"></p>
-<button class="btn" id="cb" aria-expanded="false" aria-controls="cr" data-i="cbn"></button>
-<div class="icons" id="cr" hidden>
-<button class="g ico" data-k="tg" aria-label="Telegram"><span>✈️</span>Telegram</button>
-<button class="g ico" data-k="wa" aria-label="WhatsApp"><span>💬</span>WhatsApp</button>
-<button class="g ico" data-k="ig" aria-label="Instagram"><span>📷</span>Instagram</button>
-<button class="g ico" data-k="ml" aria-label="Email"><span>✉️</span>Email</button>
-</div></section>
-
-<div class="fine g" id="fine"></div>
-<p style="text-align:center;font-size:.75rem;color:var(--mut);margin-top:16px">techsharipov.uz · © 2026 · <span data-i="au"></span></p>
+<div class="f">techsharipov.uz</div>
+</div>
 </main>
-
-<div id="ckn" class="g" role="status" hidden><span data-i="cke"></span><button class="btn" id="ckb" data-i="ckb"></button></div>
 <script>
-var L={
-uz:{h1:"Texnologiya va xavfsizlik — amaliy tarzda",hp:"Techsharipov — Sharipov Odilbek tomonidan yaratilgan IT va kiberxavfsizlik portali. Kurslar, kompyuter xizmatlari va raqamli vositalar bir joyda.",tw:"Olib boriladigan ishlar",lw:"Portalda amalga oshiriladigan asosiy yoʻnalishlar.",tc:"Kurslar",lc:"Yoʻnalishni bosing — toʻliq dastur ochiladi. Mavzular ochiq manbalardagi umumiy oʻquv dasturlari asosida tuzilgan.",tx:"Qoʻshimcha kurslar",lx:"Reklama huquqi asosida. Telegram orqali batafsil maʼlumot oling.",tt:"Aloqa",lt:"Bogʻlanish uchun tugmani bosing.",cbn:"Bogʻlanish",buy:"Batafsil kursni olish",hi:"Assalomu alaykum! Kurs haqida batafsil maʼlumot olmoqchiman: ",kl:"Tekshiruv",kt:"Kiberxavfsizligingizni tekshiring",ks:"Parolni sinab koʻring va 5 ta savolga javob bering. Hammasi brauzeringizda bajariladi, hech narsa yuborilmaydi.",ke:"Parolni kiriting",kn:"Natija",kr:["Xavf yuqori. Avval ikki bosqichli tasdiq va alohida parollarni yoqing.","Yaxshi, lekin yana bir oz mustahkamlash kerak.","Aʼlo! Odatlaringizni davom ettiring."],ki:["Har bir akkaunt uchun alohida parol ishlataman","Ikki bosqichli tasdiq (2FA) yoqilgan","Qurilma va dasturlarni yangilab turaman","Muhim maʼlumotlarning zaxira nusxasi bor","Notanish havolalarni ochmayman"],v:["Juda zaif","Zaif","Oʻrtacha","Yaxshi","Juda mustahkam"],tip:{len:"Kamida 12 belgi ishlating.",mix:"Katta-kichik harf, raqam va belgilarni aralashtiring.",seq:"Oddiy ketma-ketlik va mashhur parollardan qoching."},cke:"Sayt faqat til va mavzu tanlovingizni brauzer xotirasida saqlaydi. Reklama cookie’lari yoʻq.",ckb:"Qabul qilaman",au:"Muallif: Sharipov Odilbek",home:"Bosh sahifa",work:"Ishlar",extra:"Qoʻshimcha",contact:"Aloqa",out:"Natija",more:"Telegramda batafsil",ad:"Reklama huquqi asosida",
-W:[["🎓","Oʻquv kurslari","Kiberxavfsizlik, AI, IT, Word va Windows boʻyicha amaliy darslar."],["🪟","Windows oʻrnatish","7, 8, 10 va 11 versiyalarini oʻrnatish va rasmiy aktivatsiya."],["🛡️","Raqamli xavfsizlik","Akkaunt, parol va tarmoqni himoyalash boʻyicha maslahat."],["🤖","Botlar va veb","Python-Telegram botlar, landing sahifa va Mini-App yaratish."],["🔧","Kompyuter servisi","Diagnostika: bloklar, noutbuklar, sovutish, disklar, tarmoq."]],
-C:[["🛡️","Kiberxavfsizlik","Maʼlumot, akkaunt va tarmoqni himoya qilish","Kiberxavfsizlik — shaxsiy va tashkilot maʼlumotlarini hujumlardan himoya qilish amaliyoti. Kurs oddiy foydalanuvchi uchun moʻljallangan.",["Fishing va ijtimoiy muhandislik","Parollar, parol menejeri, ikki bosqichli tasdiq","Zararli dasturlar va antivirus","Wi-Fi va VPN xavfsizligi","Zaxira nusxa va shifrlash","Hodisaga javob berish asoslari"],"Natija: kundalik raqamli xavflarni tanib, oʻzini himoya qila oladi."],
-["🤖","Sunʼiy intellekt (AI)","Zamonaviy AI vositalari va avtomatlashtirish","Katta til modellari qanday ishlashi va ulardan ish jarayonida samarali foydalanish.",["Til modellari asoslari","Prompt injiniring","Matn, tahlil va tasvir uchun AI","Ish jarayonlarini avtomatlashtirish","Xatolar va maxfiylikni nazorat qilish"],"Natija: AI vositalarini ishda xavfsiz va samarali qoʻllaydi."],
-["💻","IT va tarmoq asoslari","Kompyuter, lokal tarmoq, DNS","Kompyuter qurilmasi va tarmoqlarning ishlash tamoyillari hamda tizim administratsiyasi asoslari.",["Protsessor, xotira, disk","Operatsion tizim asoslari","IP-manzil va lokal tarmoq","DNS, DHCP va marshrutlash","Router va Wi-Fi sozlash","Nosozliklarni topish: ping, tracert"],"Natija: tarmoqni sozlaydi va oddiy nosozliklarni bartaraf etadi."],
-["📝","Microsoft Office Word","Rasmiy hujjatlar va formatlash","Hujjatni toʻgʻri tuzish, uslublar va shablonlar bilan tez ishlash.",["Sahifa va uslublar sozlamasi","Sarlavhalar va avtomatik mundarija","Jadval va rasmlar bilan ishlash","Kolontitul va sahifa raqamlari","Pochta birlashtirish","Tahrirlarni kuzatish, PDF eksport"],"Natija: professional koʻrinishdagi hujjatlar tayyorlaydi."],
-["🪟","Windows oʻrnatish","7 / 8 / 10 / 11 va aktivatsiya","Tizimni noldan oʻrnatish, drayverlar va rasmiy aktivatsiya.",["Tizim talablari va tayyorgarlik","Yuklanuvchi USB yaratish","Disk boʻlimlari","Drayverlar va yangilanishlar","Rasmiy litsenziya bilan aktivatsiya","Optimallashtirish va zaxira nusxa"],"Natija: Windows’ni mustaqil oʻrnatadi va sozlaydi."]],
-X:[["Python va Telegram botlar","Buyurtma, hisobot va foydali botlar yaratish."],["Veb-sayt va Mini-App","Landing sahifa, veb-ilova va onlayn tashrif qogʻozi."],["Kompyuter diagnostikasi","Qurilmalarni amaliy tekshirish va servis."]],
-fine:["Cookie, kesh va maʼlumotlar haqida","Cookie va localStorage: sayt faqat til (lang), mavzu (theme) tanlovingizni va cookie xabarini qabul qilganingizni (ck) brauzeringizning localStorage xotirasida saqlaydi. Reklama yoki kuzatuv cookie’lari yoʻq.","Kesh: brauzer sahifa fayllarini tezroq yuklash uchun oʻz keshida saqlashi mumkin. Bu maʼlumot faqat sizning qurilmangizda turadi.","Maʼlumot qayerda saqlanadi: tanlovlar sizning qurilmangizda, brauzer ichida. Serverga yuborilmaydi. Parol tekshiruvi va soat ham brauzerda ishlaydi.","Aloqa tugmalari: bosganingizda tegishli ilova yoki sayt ochiladi. Saytning oʻzida hech narsa saqlanmaydi.","Oʻchirish: brauzer sozlamalarida «Sayt maʼlumotlari / kesh»ni tozalang."]},
-ru:{h1:"Технологии и безопасность — на практике",hp:"Techsharipov — IT-портал по кибербезопасности, созданный Шариповым Одилбеком. Курсы, компьютерные услуги и цифровые инструменты в одном месте.",tw:"Чем мы занимаемся",lw:"Основные направления работы портала.",tc:"Курсы",lc:"Нажмите на направление — откроется полная программа. Темы составлены по общим учебным программам из открытых источников.",tx:"Дополнительные курсы",lx:"На рекламной основе. Подробности — в Telegram.",tt:"Контакты",lt:"Нажмите кнопку, чтобы связаться.",cbn:"Связаться",buy:"Получить подробности о курсе",hi:"Здравствуйте! Хочу получить подробности о курсе: ",kl:"Проверка",kt:"Проверьте свою кибербезопасность",ks:"Проверьте пароль и ответьте на 5 вопросов. Всё выполняется в браузере, ничего не отправляется.",ke:"Введите пароль",kn:"Результат",kr:["Высокий риск. Сначала включите двухфакторную защиту и разные пароли.","Хорошо, но стоит укрепить защиту.","Отлично! Продолжайте в том же духе."],ki:["Для каждого аккаунта свой пароль","Включена двухфакторная защита (2FA)","Обновляю устройства и программы","Есть резервная копия важных данных","Не открываю незнакомые ссылки"],v:["Очень слабый","Слабый","Средний","Хороший","Очень надёжный"],tip:{len:"Используйте не менее 12 символов.",mix:"Смешайте заглавные и строчные буквы, цифры и символы.",seq:"Избегайте простых последовательностей и популярных паролей."},cke:"Сайт хранит в браузере только выбор языка и темы. Рекламных cookie нет.",ckb:"Принимаю",au:"Автор: Шарипов Одилбек",home:"Главная",work:"Работы",extra:"Дополнительно",contact:"Контакты",out:"Результат",more:"Подробнее в Telegram",ad:"На рекламной основе",
-W:[["🎓","Учебные курсы","Практические уроки по кибербезопасности, AI, IT, Word и Windows."],["🪟","Установка Windows","Установка версий 7, 8, 10 и 11, официальная активация."],["🛡️","Цифровая безопасность","Консультации по защите аккаунтов, паролей и сетей."],["🤖","Боты и веб","Python-Telegram боты, лендинги и Mini-App."],["🔧","Компьютерный сервис","Диагностика: блоки, ноутбуки, охлаждение, диски, сеть."]],
-C:[["🛡️","Кибербезопасность","Защита данных, аккаунтов и сетей","Кибербезопасность — практика защиты личных и корпоративных данных от атак. Курс рассчитан на обычного пользователя.",["Фишинг и социальная инженерия","Пароли, менеджер паролей, двухфакторная защита","Вредоносное ПО и антивирус","Безопасность Wi-Fi и VPN","Резервные копии и шифрование","Основы реагирования на инциденты"],"Результат: распознаёт ежедневные цифровые угрозы и умеет защититься."],
-["🤖","Искусственный интеллект (AI)","Современные AI-инструменты и автоматизация","Как работают большие языковые модели и как эффективно использовать их в работе.",["Основы языковых моделей","Промпт-инжиниринг","AI для текста, анализа и изображений","Автоматизация рабочих процессов","Контроль ошибок и конфиденциальности"],"Результат: безопасно и эффективно применяет AI в работе."],
-["💻","Основы IT и сетей","Компьютер, локальная сеть, DNS","Устройство компьютера, принципы работы сетей и основы администрирования.",["Процессор, память, диск","Основы операционных систем","IP-адреса и локальная сеть","DNS, DHCP и маршрутизация","Настройка роутера и Wi-Fi","Поиск неисправностей: ping, tracert"],"Результат: настраивает сеть и устраняет простые неисправности."],
-["📝","Microsoft Office Word","Официальные документы и форматирование","Правильное оформление документов, быстрая работа со стилями и шаблонами.",["Настройка страницы и стилей","Заголовки и автооглавление","Таблицы и изображения","Колонтитулы и номера страниц","Слияние для рассылки","Рецензирование и экспорт в PDF"],"Результат: готовит документы профессионального вида."],
-["🪟","Установка Windows","7 / 8 / 10 / 11 и активация","Установка системы с нуля, драйверы и официальная активация.",["Требования и подготовка","Создание загрузочной USB","Разделы диска","Драйверы и обновления","Активация по официальной лицензии","Оптимизация и резервная копия"],"Результат: самостоятельно устанавливает и настраивает Windows."]],
-X:[["Python и Telegram-боты","Создание ботов для заказов, отчётов и других задач."],["Сайты и Mini-App","Лендинги, веб-приложения и онлайн-визитки."],["Диагностика компьютеров","Практическая проверка устройств и сервис."]],
-fine:["О cookie, кеше и данных","Cookie и localStorage: сайт сохраняет в localStorage браузера только выбор языка (lang), темы (theme) и отметку о принятии уведомления о cookie (ck). Рекламных и отслеживающих cookie нет.","Кеш: браузер может хранить файлы страницы в своём кеше д
+(function(){
+  var t=document.getElementById("t"),d=document.getElementById("d");
+  function p(n){return n<10?"0"+n:""+n}
+  function tick(){
+    var x=new Date(Date.now()+5*36e5);
+    t.textContent=p(x.getUTCHours())+":"+p(x.getUTCMinutes())+":"+p(x.getUTCSeconds());
+    d.textContent=p(x.getUTCDate())+"."+p(x.getUTCMonth()+1)+"."+x.getUTCFullYear();
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
