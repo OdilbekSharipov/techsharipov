@@ -3,194 +3,270 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Techsharipov — IT va Kiberxavfsizlik</title>
+<title>Techsharipov — Taʼlim portali</title>
+<meta name="description" content="IT va kiberxavfsizlik, Windows, ingliz tili va sertifikatlar, rus tili, tarix, matematika, treyding va onlayn shop kurslari.">
 <style>
-:root{--ink:#0b1b2b;--mut:#44586b;--glass:rgba(255,255,255,.42);--edge:rgba(255,255,255,.7);--hi:rgba(255,255,255,.9);--sh:rgba(20,50,90,.18);--acc:#0a84ff;--bg1:#cfe6ff;--bg2:#ffd9e8;--bg3:#d5ffe9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eaf2fb;--mut:#a9bccf;--glass:rgba(30,40,60,.45);--edge:rgba(255,255,255,.16);--hi:rgba(255,255,255,.25);--sh:rgba(0,0,0,.5);--acc:#64b5ff;--bg1:#0b2447;--bg2:#3a1738;--bg3:#0b3a33;color-scheme:dark}}
-:root[data-theme="dark"]{--ink:#eaf2fb;--mut:#a9bccf;--glass:rgba(30,40,60,.45);--edge:rgba(255,255,255,.16);--hi:rgba(255,255,255,.25);--sh:rgba(0,0,0,.5);--acc:#64b5ff;--bg1:#0b2447;--bg2:#3a1738;--bg3:#0b3a33;color-scheme:dark}
-html{height:100%;scroll-behavior:smooth;scroll-padding-top:90px}
+:root{--ink:#0e2238;--mut:#52667a;--blue:#0a64e8;--teal:#0fb5a6;--solid:rgba(255,255,255,.85);--glass:rgba(255,255,255,.58);--edge:rgba(255,255,255,.9);--sh:rgba(20,70,150,.16)}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;min-height:100%;color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;background:var(--bg1)}
-body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(40vmax 40vmax at 15% 10%,var(--bg1),transparent 70%),radial-gradient(45vmax 45vmax at 90% 20%,var(--bg2),transparent 70%),radial-gradient(50vmax 50vmax at 60% 100%,var(--bg3),transparent 70%),radial-gradient(30vmax 30vmax at 20% 85%,#7cc0ff55,transparent 70%)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg1);z-index:50}
-.g{background:var(--glass);-webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);border:1px solid var(--edge);box-shadow:inset 0 1px 0 var(--hi),0 10px 30px var(--sh);border-radius:24px}
-h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.02em}
-:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-a{color:var(--acc)}
-#clock{font-variant-numeric:tabular-nums;font-weight:700;font-size:.92rem}
-#clock small{color:var(--mut);font-weight:600;margin-right:6px}
-.lang{display:flex;gap:3px}
-.lang button,.tb{border:0;background:transparent;color:var(--ink);font:inherit;font-size:.82rem;font-weight:700;padding:5px 10px;border-radius:999px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--acc);color:#fff}
-.hero{padding:44px 36px;margin-top:10px}
-.hero h1{font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;max-width:16ch}
-.hero p{max-width:56ch;color:var(--mut);margin:14px 0 0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.chips span{padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
-section{margin-top:34px}
-section>h2{font-size:1.5rem;margin:0 6px 6px}
-.lead{color:var(--mut);margin:0 6px 16px;max-width:64ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.card{padding:20px;border-radius:22px}
-.card .ic{font-size:1.6rem}
-.card h3{font-size:1.02rem;margin:8px 0 4px}
-.card p{margin:0;color:var(--mut);font-size:.92rem}
-details.c{border-radius:24px;margin-bottom:12px;overflow:hidden}
-details.c summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:18px 20px}
-details.c summary::-webkit-details-marker{display:none}
-details.c .ic{font-size:1.8rem}
-details.c .t{flex:1}
-details.c .t b{display:block;font-size:1.08rem}
-details.c .t span{color:var(--mut);font-size:.9rem}
-details.c summary::after{content:"+";font-size:1.5rem;font-weight:300;color:var(--acc)}
-details.c[open] summary::after{content:"–"}
-.body{padding:0 20px 20px;border-top:1px solid var(--edge)}
-.body p{color:var(--mut);margin:14px 0 8px}
-.body ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
-.body li{padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--edge);font-size:.92rem}
-.body .res{margin-top:12px;font-size:.9rem;font-weight:600}
-.btn{display:inline-block;background:var(--acc);color:#fff;border:0;padding:11px 20px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
-.btn.alt{background:var(--glass);color:var(--ink);border:1px solid var(--edge)}
-.tag{font-size:.75rem;font-weight:700;color:var(--acc)}
-input,textarea,select{padding:11px 13px;border-radius:14px;border:1px solid var(--edge);background:var(--glass);color:var(--ink);font:inherit}
-.fine{margin-top:40px;padding:18px 20px;font-size:.68rem;line-height:1.5;color:var(--mut);border-radius:18px}
-.fine b{color:var(--ink)}
-.fine p{margin:0 0 6px}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-main{max-width:1000px;margin:0 auto;padding:12px 16px 40px}
-.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.ham{width:48px;height:48px;padding:0;border-radius:50%;display:grid;place-content:center;gap:5px;cursor:pointer;color:var(--ink)}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:#eaf1fb;color:var(--ink);font:15px/1.55 "Inter",-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;position:relative}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(40vmax 40vmax at 90% 5%,#ffd9ec,transparent 70%),radial-gradient(45vmax 45vmax at 40% 100%,#c9fbe9,transparent 70%),radial-gradient(40vmax 40vmax at 100% 70%,#cfe3ff,transparent 70%)}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid #ffb020;outline-offset:2px}
+.g{background:var(--solid);border:1px solid var(--edge);box-shadow:inset 0 1px 0 #fff,0 10px 30px var(--sh);border-radius:24px}
+@supports((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.g{background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}}
+/* sidebar */
+.side{position:fixed;left:8px;top:8px;bottom:8px;width:262px;z-index:40;border-radius:26px;padding:18px 14px 24px;overflow-y:auto;color:#fff;background:linear-gradient(180deg,#0b70f5,#0556d4);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 16px 40px rgba(10,80,200,.35)}
+.logo{display:flex;align-items:center;gap:10px;justify-content:center;padding:6px 0 14px;font-weight:800;font-size:1.12rem;text-decoration:none}
+.logo i{font-style:normal;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.5);font-size:1.3rem}
+.sec{font-weight:800;font-size:1.02rem;margin:16px 6px 4px;display:flex;justify-content:space-between;letter-spacing:.01em}
+.side a.m{display:flex;gap:12px;align-items:center;padding:11px 6px;font-weight:600;font-size:.9rem;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.22)}
+.side a.m:hover{background:rgba(255,255,255,.14);border-radius:10px}
+.side a.m span{width:24px;text-align:center;font-size:1.15rem}
+.side .sec+a.m,.side a.m:last-of-type{}
+/* layout */
+main{position:relative;z-index:1;margin-left:286px;padding:16px 24px 40px;max-width:1340px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0 18px}
+.ttl{font-size:.92rem;font-weight:500;letter-spacing:.03em;text-transform:uppercase;line-height:1.35}
+.tr{display:flex;align-items:center;gap:14px}
+.clk{display:grid;line-height:1.15;text-align:right}
+.clk small{color:var(--mut);font-size:.72rem;font-weight:700}
+.clk b{font-size:1.05rem;font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#1a7bff,#0a58d8);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 8px 20px rgba(10,100,232,.35);border:0;cursor:pointer;font:inherit;font-weight:700}
+.ham,.shade{display:none}
+.ham{width:46px;height:46px;border-radius:50%;place-content:center;gap:5px;cursor:pointer}
 .ham i{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
-.tr{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px}
-.splash{position:fixed;inset:0;z-index:60;display:none;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 76px) 20px calc(env(safe-area-inset-bottom,0px) + 24px);background:var(--glass);background:color-mix(in srgb,var(--bg1) 55%,transparent);-webkit-backdrop-filter:blur(40px) saturate(180%);backdrop-filter:blur(40px) saturate(180%);overflow-y:auto}
-.splash.on{display:flex;animation:fi .25s}
-@keyframes fi{from{opacity:0}}
-.splash .x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:16px;width:46px;height:46px;border-radius:50%;border:1px solid var(--edge);background:var(--glass);color:var(--ink);font-size:1.1rem;cursor:pointer}
-.si{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:620px;width:100%;margin:auto}
-.si a{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:20px;color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
-.si a span:first-child{font-size:1.6rem}
-.icons{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-.icons[hidden]{display:none}
-.ico{display:flex;flex-direction:column;align-items:center;gap:4px;width:96px;padding:14px 8px;border-radius:20px;color:var(--ink);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
-.ico span{font-size:1.7rem}
-.chk{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.meter{height:10px;background:var(--edge);border-radius:6px;margin:14px 0 8px;overflow:hidden}
-.meter i{display:block;height:100%;width:0;background:#e5484d;transition:width .25s,background .25s}
-#verdict{font-weight:700;min-height:1.6em}
-#tips{margin:6px 0 0;padding-left:18px;color:var(--mut);font-size:.9rem}
-#pw{width:100%}
-.q{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:.94rem;cursor:pointer}
-.q input{margin-top:3px;width:18px;height:18px;padding:0;accent-color:var(--acc)}
-#qs{font-weight:700;margin-top:8px}
-#ckn{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(520px,calc(100% - 24px));padding:14px 16px;display:flex;gap:12px;align-items:center;z-index:45;font-size:.88rem;animation:up .5s}
-#ckn[hidden]{display:none}
+/* hero */
+.hero{border-radius:28px;padding:28px;color:#fff;background:linear-gradient(105deg,#0a5ce6 0%,#0a86d8 55%,#0fc1a3 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 18px 40px rgba(10,100,232,.28);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 20% 0%,rgba(255,255,255,.22),transparent 60%);pointer-events:none}
+.hr{display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;z-index:1}
+.hero h1{font-size:2.1rem;font-weight:800;letter-spacing:-.02em}
+.search{flex:1;min-width:240px;display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:0 16px;box-shadow:0 8px 20px rgba(0,40,120,.18)}
+.search input{flex:1;border:0;outline:0;background:transparent;height:52px;font:inherit;color:var(--ink)}
+.search input::placeholder{color:#7b8fa5}
+.strip{display:flex;gap:14px;overflow-x:auto;margin-top:24px;padding-bottom:6px;scroll-snap-type:x proximity;position:relative;z-index:1}
+.tile{flex:0 0 128px;height:190px;scroll-snap-align:start;border-radius:20px;border:2px solid rgba(255,255,255,.75);padding:12px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;color:#fff;font-weight:700;font-size:.82rem;line-height:1.25;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.tile b{font-size:2.6rem;text-align:center;line-height:1;margin-top:18px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25))}
+/* banner */
+.banner{display:grid;grid-template-columns:230px 1fr auto;margin-top:22px;border-radius:26px;overflow:hidden;color:#fff;background:linear-gradient(100deg,#0a5ce6,#0aa7c9 70%,#0fc1a3);box-shadow:0 14px 34px rgba(10,100,232,.25)}
+.bl{background:#f4f8ff;color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:1.1rem;padding:20px;clip-path:ellipse(100% 140% at 0 50%)}
+.bm{padding:22px 24px}
+.bm small{font-weight:800;opacity:.9}
+.bm h2{font-size:1.9rem;font-weight:800;line-height:1.15;margin:4px 0}
+.br{display:flex;align-items:center;gap:10px;padding:0 28px}
+.br strong{font-size:6rem;line-height:1;font-weight:800}
+.br span{background:#ffd34e;color:#6a4a00;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:800}
+.br p{font-size:1.5rem;font-weight:800}
+/* two cards */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.two .g{padding:24px}
+.two h3{font-size:1.25rem;font-weight:800;margin-bottom:8px}
+.two p,.two li{color:var(--mut);font-size:.93rem}
+.two ul{margin:0;padding-left:18px}
+.more{display:inline-block;margin-top:12px;font-weight:700;text-decoration:none;color:var(--blue)}
+.more.gr{color:#0a9c7e}
+/* sections */
+.h{font-size:1.55rem;font-weight:500;color:#1177d4;margin:34px 4px 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.c{padding:20px;display:flex;flex-direction:column;gap:12px}
+.c[hidden]{display:none}
+.ch{display:flex;gap:14px;align-items:center}
+.ci{flex:0 0 54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:1.7rem;color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.c h3{font-size:1.08rem;font-weight:800;line-height:1.2}
+.c p{color:var(--mut);font-size:.92rem}
+details{border-top:1px solid rgba(14,34,56,.1);padding-top:10px}
+summary{cursor:pointer;font-weight:700;color:var(--blue);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:" +"}
+details[open] summary::after{content:" –"}
+.c ul{margin:10px 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.c li{background:rgba(10,100,232,.09);color:#0a4cb8;padding:5px 11px;border-radius:999px;font-size:.82rem;font-weight:600}
+.fact{background:rgba(255,211,78,.28);border-radius:14px;padding:10px 12px;font-size:.88rem;color:#5a4300}
+.warn{background:rgba(229,72,77,.12);color:#9b1c24}
+.tg{margin-top:auto;align-self:flex-start;font-size:.9rem;padding:10px 16px}
+/* contact */
+.contact{padding:28px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.tgl{width:72px;height:72px;border-radius:50%;background:#229ed9;display:grid;place-items:center;box-shadow:0 10px 24px rgba(34,158,217,.4)}
+.tgl svg{width:40px;height:40px;fill:#fff}
+.contact h3{font-size:1.3rem;font-weight:800}
+.contact p{color:var(--mut)}
+.contact>div{flex:1;min-width:220px}
+.fine{margin-top:34px;padding:16px 18px;font-size:.68rem;line-height:1.5;color:var(--mut);border-radius:18px}
+.fine p{margin:0 0 5px}.fine b{color:var(--ink)}
+.copy{text-align:center;font-size:.75rem;color:var(--mut);margin-top:14px}
+#ck{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(520px,calc(100% - 24px));padding:14px 16px;display:flex;gap:12px;align-items:center;z-index:60;font-size:.86rem;animation:up .5s}
+#ck[hidden]{display:none}
 @keyframes up{from{transform:translate(-50%,30px);opacity:0}}
-@media(max-width:760px){.chk{grid-template-columns:1fr}}
-@media(max-width:640px){main{padding:12px}.hero{padding:28px 20px}.tr{gap:4px;padding:6px 8px}#clock small{display:none}}
+/* mobile */
+@media(max-width:960px){
+ .ham{display:grid}
+ .side{transform:translateX(-115%);transition:transform .3s;top:calc(env(safe-area-inset-top,0px) + 8px)}
+ #mt:checked~.side{transform:none}
+ #mt:checked~.shade{display:block;position:fixed;inset:0;z-index:35;background:rgba(10,30,60,.35)}
+ main{margin-left:0;padding:calc(env(safe-area-inset-top,0px) + 12px) 14px 40px}
+ .ttl{display:none}
+ .top{justify-content:space-between}
+ .banner{grid-template-columns:1fr}.bl{display:none}.br{padding:0 24px 18px}.br strong{font-size:4rem}.bm h2{font-size:1.45rem}
+ .two{grid-template-columns:1fr}
+ .hero{padding:20px}.hero h1{font-size:1.6rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.lang{display:flex;gap:2px;padding:4px;border-radius:999px}
+.lang button{border:0;background:transparent;font:inherit;font-size:.8rem;font-weight:800;padding:6px 10px;border-radius:999px;cursor:pointer;color:var(--ink)}
+.lang button[aria-pressed="true"]{background:var(--blue);color:#fff}
+@media(max-width:640px){.tr>.btn{display:none}.tr{gap:8px}.lang button{padding:6px 8px}}
 </style>
 </head>
 <body>
-<nav class="splash" id="nav" aria-label="Menu"></nav>
-<main>
-<div class="top"><button class="g ham" id="ham" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button><div class="tr g"><div id="clock" aria-label="GMT+5"></div><div class="lang" role="group" aria-label="Language"><button data-l="uz">UZ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div><button class="tb" id="th" aria-label="Theme">◐</button></div></div>
+<div class="bg" aria-hidden="true"></div>
+<input type="checkbox" id="mt" hidden>
+<nav class="side" aria-label="Menyu">
+ <a class="logo" href="#top"><i>🛡️</i>techsharipov.uz</a>
+ <div class="sec"><span>Kurslar</span><span>⌄</span></div>
+ <a class="m" href="#top"><span>🏠</span>Bosh sahifa</a>
+ <a class="m" href="#it"><span>🛡️</span>IT va kiberxavfsizlik</a>
+ <a class="m" href="#win"><span>🪟</span>Windows kurslari</a>
+ <a class="m" href="#eng"><span>🇬🇧</span>Ingliz tili va sertifikatlar</a>
+ <a class="m" href="#rus"><span>🇷🇺</span>Rus tili</a>
+ <a class="m" href="#his"><span>🏛️</span>Tarix</a>
+ <a class="m" href="#mat"><span>➗</span>Matematika</a>
+ <div class="sec"><span>Qoʻshimcha kurslar</span><span>⌄</span></div>
+ <a class="m" href="#trd"><span>📈</span>Treyding</a>
+ <a class="m" href="#shop"><span>🛍️</span>Onlayn shop</a>
+ <div class="sec"><span>Yordam va qoʻllab-quvvatlash</span><span>⌄</span></div>
+ <a class="m" href="#facts"><span>💡</span>Qiziqarli maʼlumotlar</a>
+ <a class="m" href="#contact"><span>✈️</span>Aloqa</a>
+ <a class="m" href="#fine"><span>🍪</span>Cookie va maxfiylik</a>
+</nav>
+<label class="shade" for="mt" aria-label="Yopish"></label>
 
-<div class="hero g" id="home">
-<h1 data-i="h1"></h1><p data-i="hp"></p>
-<div class="chips"><span class="g">Cybersecurity</span><span class="g">AI</span><span class="g">Networks</span><span class="g">Word</span><span class="g">Windows</span></div>
-</div>
+<main id="top">
+ <div class="top">
+  <label class="g ham" for="mt" aria-label="Menyu"><i></i><i></i><i></i></label>
+  <div class="ttl">IT va kiberxavfsizlik<br>taʼlim portali</div>
+  <div class="tr">
+   <div class="lang g" role="group" aria-label="Til"><button data-l="uz" aria-pressed="true">UZ</button><button data-l="ru" aria-pressed="false">RU</button><button data-l="en" aria-pressed="false">EN</button><button data-l="qq" aria-pressed="false" title="Qaraqalpaqsha">QQ</button></div>
+   <div class="clk"><small>GMT+5</small><b id="t">--:--:--</b></div>
+   <a class="btn" href="https://t.me/B1techuz" target="_blank" rel="noopener">✈️ Telegram</a>
+  </div>
+ </div>
 
-<section id="work"><h2 data-i="tw"></h2><p class="lead" data-i="lw"></p><div class="grid" id="wg"></div></section>
+ <section class="hero">
+  <div class="hr">
+   <h1>Xush kelibsiz!</h1>
+   <label class="search"><span aria-hidden="true">🔎</span><input id="q" type="search" placeholder="Kurs qidiring, masalan — Windows" aria-label="Kurs qidirish"></label>
+  </div>
+  <div class="strip">
+   <a class="tile" href="#it" style="background:linear-gradient(160deg,#5aa8ff,#2a62d9)"><b>🛡️</b>IT va kiber­xavfsizlik</a>
+   <a class="tile" href="#win" style="background:linear-gradient(160deg,#4fc3f7,#1976d2)"><b>🪟</b>Windows</a>
+   <a class="tile" href="#eng" style="background:linear-gradient(160deg,#7c8cff,#4a4ad8)"><b>🇬🇧</b>Ingliz tili va sertifikat</a>
+   <a class="tile" href="#rus" style="background:linear-gradient(160deg,#ff8a8a,#d94a6a)"><b>🇷🇺</b>Rus tili</a>
+   <a class="tile" href="#his" style="background:linear-gradient(160deg,#e0a458,#b5651d)"><b>🏛️</b>Tarix</a>
+   <a class="tile" href="#mat" style="background:linear-gradient(160deg,#35d0ba,#0a8f8f)"><b>➗</b>Matematika</a>
+   <a class="tile" href="#trd" style="background:linear-gradient(160deg,#58d68d,#1e8449)"><b>📈</b>Treyding</a>
+   <a class="tile" href="#shop" style="background:linear-gradient(160deg,#ffb347,#e8590c)"><b>🛍️</b>Onlayn shop</a>
+  </div>
+ </section>
 
-<section id="check"><h2 data-i="kt"></h2><p class="lead" data-i="ks"></p>
-<div class="chk g"><div><input id="pw" type="password" autocomplete="off" spellcheck="false" aria-label="Password"><div class="meter" aria-hidden="true"><i id="bar"></i></div><div id="verdict" aria-live="polite"></div><ul id="tips"></ul></div>
-<div><div id="ql"></div><div id="qs" aria-live="polite"></div></div></div></section>
+ <section class="banner">
+  <div class="bl">🛡️ techsharipov.uz</div>
+  <div class="bm"><small>TAʼLIM / 2026</small><h2>Bilim va xavfsizlik — bir joyda</h2><p>IT’dan tarixgacha, tildan treydinggacha</p></div>
+  <div class="br"><strong>9</strong><div><span>YOʻNALISH</span><p>ta kurs</p></div></div>
+ </section>
 
-<section id="courses"><h2 data-i="tc"></h2><p class="lead" data-i="lc"></p><div id="cl"></div></section>
+ <section class="two" id="facts">
+  <div class="g"><h3>Qiziqarli maʼlumotlar</h3>
+   <ul><li>Koʻp kiberhujumlar fishing xati orqali boshlanadi.</li><li>IELTS natijasi 0 dan 9 gacha ball bilan baholanadi.</li><li>Amir Temur 1336-yilda tugʻilgan.</li></ul>
+   <a class="more" href="#kurs">Kurslarni koʻrish →</a></div>
+  <div class="g"><h3>Sertifikatlar</h3>
+   <p>Ingliz tili kursida CEFR darajalari (A1–C2) va IELTS formatiga tayyorgarlik beriladi. Kurs yakunida oʻz darajangizni aniq bilib olasiz.</p>
+   <a class="more gr" href="#eng">Batafsil maʼlumot →</a></div>
+ </section>
 
-<section id="extra"><h2 data-i="tx"></h2><p class="lead" data-i="lx"></p><div class="grid" id="xg"></div></section>
+ <h2 class="h" id="kurs">Kurslar</h2>
+ <div class="grid">
+  <article class="g c" id="it"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#5aa8ff,#2a62d9)">🛡️</div><div><h3>IT va kiberxavfsizlik</h3><p>Maʼlumot, akkaunt va tarmoqni himoya qilish.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Fishing</li><li>Parol va 2FA</li><li>Antivirus</li><li>Wi-Fi va VPN</li><li>Zaxira nusxa</li><li>Tarmoq asoslari</li></ul><div class="fact">💡 Koʻp hujumlar texnikadan emas, fishing xatiga ishonishdan boshlanadi.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20IT%20va%20kiberxavfsizlik" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+  <article class="g c" id="win"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#4fc3f7,#1976d2)">🪟</div><div><h3>Windows kurslari</h3><p>7, 8, 10 va 11 ni oʻrnatish va sozlash.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Yuklanuvchi USB</li><li>Disk boʻlimlari</li><li>Drayverlar</li><li>Rasmiy aktivatsiya</li><li>Zaxira nusxa</li></ul><div class="fact">💡 Windows 10 uchun oddiy xavfsizlik yangilanishlari 2025-yil 14-oktyabrda tugagan.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Windows" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+  <article class="g c" id="eng"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#7c8cff,#4a4ad8)">🇬🇧</div><div><h3>Ingliz tili va sertifikatlar</h3><p>Speaking, grammatika va IELTS/CEFR tayyorlov.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>A1–C2 darajalar</li><li>Listening</li><li>Reading</li><li>Writing</li><li>Speaking</li><li>Mock test</li></ul><div class="fact">💡 IELTS 4 bo‘limdan iborat va natija 0–9 ball shkalasida beriladi.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Ingliz%20tili%20va%20sertifikatlar" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+  <article class="g c" id="rus"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#ff8a8a,#d94a6a)">🇷🇺</div><div><h3>Rus tili</h3><p>Grammatika, imlo va ravon nutq.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Alifbo va oʻqish</li><li>Grammatika</li><li>Imlo</li><li>Soʻzlashuv</li><li>Yozma ish</li></ul><div class="fact">💡 Rus alifbosida 33 ta harf bor.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Rus%20tili" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+  <article class="g c" id="his"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#e0a458,#b5651d)">🏛️</div><div><h3>Tarix</h3><p>Jahon va Oʻzbekiston tarixi, sanalar bilan ishlash.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Qadimgi davr</li><li>Ipak yoʻli</li><li>Temuriylar</li><li>Yangi davr</li><li>Test mashqlari</li></ul><div class="fact">💡 Amir Temur 1336-yilda Kesh yaqinida tugʻilgan.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Tarix" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+  <article class="g c" id="mat"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#35d0ba,#0a8f8f)">➗</div><div><h3>Matematika</h3><p>Algebra va geometriya, masala yechish usullari.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Tenglamalar</li><li>Funksiyalar</li><li>Geometriya</li><li>Foizlar</li><li>Masalalar</li></ul><div class="fact">💡 Pifagor teoremasi: to‘g‘ri burchakli uchburchakda a² + b² = c².</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Matematika" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+ </div>
 
-<section id="contact"><h2 data-i="tt"></h2><p class="lead" data-i="lt"></p>
-<button class="btn" id="cb" aria-expanded="false" aria-controls="cr" data-i="cbn"></button>
-<div class="icons" id="cr" hidden>
-<button class="g ico" data-k="tg" aria-label="Telegram"><span>✈️</span>Telegram</button>
-<button class="g ico" data-k="wa" aria-label="WhatsApp"><span>💬</span>WhatsApp</button>
-<button class="g ico" data-k="ig" aria-label="Instagram"><span>📷</span>Instagram</button>
-<button class="g ico" data-k="ml" aria-label="Email"><span>✉️</span>Email</button>
-</div></section>
+ <h2 class="h">Qoʻshimcha kurslar</h2>
+ <div class="grid">
+  <article class="g c" id="trd"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#58d68d,#1e8449)">📈</div><div><h3>Treyding</h3><p>Moliya bozori asoslari va xavfni boshqarish.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Bozor turlari</li><li>Grafik oʻqish</li><li>Risk-menejment</li><li>Demo hisob</li></ul><div class="fact warn">⚠️ Treyding yuqori xavfli: mablagʻni yoʻqotish mumkin, foyda kafolatlanmaydi.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Treyding" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+  <article class="g c" id="shop"><div class="ch"><div class="ci" style="background:linear-gradient(160deg,#ffb347,#e8590c)">🛍️</div><div><h3>Onlayn shop magazin</h3><p>Onlayn doʻkon ochish va sotuvni yoʻlga qoʻyish.</p></div></div>
+   <details><summary>Batafsil</summary><ul><li>Mahsulot tanlash</li><li>Doʻkon yaratish</li><li>Rasm va tavsif</li><li>Narx va marja</li><li>Reklama</li><li>Yetkazib berish</li></ul><div class="fact">💡 Aniq rasm va tushunarli tavsif xaridor qaroriga katta taʼsir qiladi.</div></details>
+   <a class="btn tg" href="https://t.me/B1techuz?text=Assalomu%20alaykum!%20Kurs%20haqida%20batafsil:%20Onlayn%20shop" target="_blank" rel="noopener">Batafsil kursni olish</a></article>
+ </div>
 
-<div class="fine g" id="fine"></div>
-<p style="text-align:center;font-size:.75rem;color:var(--mut);margin-top:16px">techsharipov.uz · © 2026 · <span data-i="au"></span></p>
+ <h2 class="h" id="contact">Aloqa</h2>
+ <section class="g contact">
+  <div class="tgl" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div>
+  <div><h3>Telegram orqali bogʻlaning</h3><p>Kurslar, narxlar va yozilish boʻyicha savollarni Telegramda yozing.</p></div>
+  <a class="btn" href="https://t.me/B1techuz" target="_blank" rel="noopener">Telegramni ochish</a>
+ </section>
+
+ <section class="g fine" id="fine">
+  <p><b>Cookie, kesh va maʼlumotlar haqida</b></p>
+  <p>Cookie va localStorage: sayt faqat cookie xabarini qabul qilganingizni (ck) va tanlangan tilni (lang) brauzeringizning localStorage xotirasida saqlaydi. Reklama yoki kuzatuv cookie’lari yoʻq.</p>
+  <p>Kesh: brauzer sahifa fayllarini tezroq yuklash uchun oʻz keshida saqlashi mumkin. Bu maʼlumot faqat sizning qurilmangizda turadi.</p>
+  <p>Maʼlumot qayerda saqlanadi: tanlovlar sizning qurilmangizda, brauzer ichida. Serverga yuborilmaydi. Qidiruv va soat brauzerda ishlaydi.</p>
+  <p>Aloqa tugmalari: bosganingizda Telegram ochiladi. Saytning oʻzida hech narsa saqlanmaydi.</p>
+  <p>Oʻchirish: brauzer sozlamalarida «Sayt maʼlumotlari / kesh»ni tozalang.</p>
+ </section>
+ <p class="copy">techsharipov.uz · © 2026 · Muallif: Sharipov Odilbek</p>
 </main>
 
-<div id="ckn" class="g" role="status" hidden><span data-i="cke"></span><button class="btn" id="ckb" data-i="ckb"></button></div>
+<div id="ck" class="g" role="status" hidden><span>Sayt faqat cookie xabarini qabul qilganingizni va tanlangan tilni brauzer xotirasida saqlaydi. Reklama cookie’lari yoʻq.</span><button class="btn" id="ok">Qabul qilaman</button></div>
+
 <script>
-var L={
-uz:{h1:"Texnologiya va xavfsizlik — amaliy tarzda",hp:"Techsharipov — Sharipov Odilbek tomonidan yaratilgan IT va kiberxavfsizlik portali. Kurslar, kompyuter xizmatlari va raqamli vositalar bir joyda.",tw:"Olib boriladigan ishlar",lw:"Portalda amalga oshiriladigan asosiy yoʻnalishlar.",tc:"Kurslar",lc:"Yoʻnalishni bosing — toʻliq dastur ochiladi. Mavzular ochiq manbalardagi umumiy oʻquv dasturlari asosida tuzilgan.",tx:"Qoʻshimcha kurslar",lx:"Reklama huquqi asosida. Telegram orqali batafsil maʼlumot oling.",tt:"Aloqa",lt:"Bogʻlanish uchun tugmani bosing.",cbn:"Bogʻlanish",buy:"Batafsil kursni olish",hi:"Assalomu alaykum! Kurs haqida batafsil maʼlumot olmoqchiman: ",kl:"Tekshiruv",kt:"Kiberxavfsizligingizni tekshiring",ks:"Parolni sinab koʻring va 5 ta savolga javob bering. Hammasi brauzeringizda bajariladi, hech narsa yuborilmaydi.",ke:"Parolni kiriting",kn:"Natija",kr:["Xavf yuqori. Avval ikki bosqichli tasdiq va alohida parollarni yoqing.","Yaxshi, lekin yana bir oz mustahkamlash kerak.","Aʼlo! Odatlaringizni davom ettiring."],ki:["Har bir akkaunt uchun alohida parol ishlataman","Ikki bosqichli tasdiq (2FA) yoqilgan","Qurilma va dasturlarni yangilab turaman","Muhim maʼlumotlarning zaxira nusxasi bor","Notanish havolalarni ochmayman"],v:["Juda zaif","Zaif","Oʻrtacha","Yaxshi","Juda mustahkam"],tip:{len:"Kamida 12 belgi ishlating.",mix:"Katta-kichik harf, raqam va belgilarni aralashtiring.",seq:"Oddiy ketma-ketlik va mashhur parollardan qoching."},cke:"Sayt faqat til va mavzu tanlovingizni brauzer xotirasida saqlaydi. Reklama cookie’lari yoʻq.",ckb:"Qabul qilaman",au:"Muallif: Sharipov Odilbek",home:"Bosh sahifa",work:"Ishlar",extra:"Qoʻshimcha",contact:"Aloqa",out:"Natija",more:"Telegramda batafsil",ad:"Reklama huquqi asosida",
-W:[["🎓","Oʻquv kurslari","Kiberxavfsizlik, AI, IT, Word va Windows boʻyicha amaliy darslar."],["🪟","Windows oʻrnatish","7, 8, 10 va 11 versiyalarini oʻrnatish va rasmiy aktivatsiya."],["🛡️","Raqamli xavfsizlik","Akkaunt, parol va tarmoqni himoyalash boʻyicha maslahat."],["🤖","Botlar va veb","Python-Telegram botlar, landing sahifa va Mini-App yaratish."],["🔧","Kompyuter servisi","Diagnostika: bloklar, noutbuklar, sovutish, disklar, tarmoq."]],
-C:[["🛡️","Kiberxavfsizlik","Maʼlumot, akkaunt va tarmoqni himoya qilish","Kiberxavfsizlik — shaxsiy va tashkilot maʼlumotlarini hujumlardan himoya qilish amaliyoti. Kurs oddiy foydalanuvchi uchun moʻljallangan.",["Fishing va ijtimoiy muhandislik","Parollar, parol menejeri, ikki bosqichli tasdiq","Zararli dasturlar va antivirus","Wi-Fi va VPN xavfsizligi","Zaxira nusxa va shifrlash","Hodisaga javob berish asoslari"],"Natija: kundalik raqamli xavflarni tanib, oʻzini himoya qila oladi."],
-["🤖","Sunʼiy intellekt (AI)","Zamonaviy AI vositalari va avtomatlashtirish","Katta til modellari qanday ishlashi va ulardan ish jarayonida samarali foydalanish.",["Til modellari asoslari","Prompt injiniring","Matn, tahlil va tasvir uchun AI","Ish jarayonlarini avtomatlashtirish","Xatolar va maxfiylikni nazorat qilish"],"Natija: AI vositalarini ishda xavfsiz va samarali qoʻllaydi."],
-["💻","IT va tarmoq asoslari","Kompyuter, lokal tarmoq, DNS","Kompyuter qurilmasi va tarmoqlarning ishlash tamoyillari hamda tizim administratsiyasi asoslari.",["Protsessor, xotira, disk","Operatsion tizim asoslari","IP-manzil va lokal tarmoq","DNS, DHCP va marshrutlash","Router va Wi-Fi sozlash","Nosozliklarni topish: ping, tracert"],"Natija: tarmoqni sozlaydi va oddiy nosozliklarni bartaraf etadi."],
-["📝","Microsoft Office Word","Rasmiy hujjatlar va formatlash","Hujjatni toʻgʻri tuzish, uslublar va shablonlar bilan tez ishlash.",["Sahifa va uslublar sozlamasi","Sarlavhalar va avtomatik mundarija","Jadval va rasmlar bilan ishlash","Kolontitul va sahifa raqamlari","Pochta birlashtirish","Tahrirlarni kuzatish, PDF eksport"],"Natija: professional koʻrinishdagi hujjatlar tayyorlaydi."],
-["🪟","Windows oʻrnatish","7 / 8 / 10 / 11 va aktivatsiya","Tizimni noldan oʻrnatish, drayverlar va rasmiy aktivatsiya.",["Tizim talablari va tayyorgarlik","Yuklanuvchi USB yaratish","Disk boʻlimlari","Drayverlar va yangilanishlar","Rasmiy litsenziya bilan aktivatsiya","Optimallashtirish va zaxira nusxa"],"Natija: Windows’ni mustaqil oʻrnatadi va sozlaydi."]],
-X:[["Python va Telegram botlar","Buyurtma, hisobot va foydali botlar yaratish."],["Veb-sayt va Mini-App","Landing sahifa, veb-ilova va onlayn tashrif qogʻozi."],["Kompyuter diagnostikasi","Qurilmalarni amaliy tekshirish va servis."]],
-fine:["Cookie, kesh va maʼlumotlar haqida","Cookie va localStorage: sayt faqat til (lang), mavzu (theme) tanlovingizni va cookie xabarini qabul qilganingizni (ck) brauzeringizning localStorage xotirasida saqlaydi. Reklama yoki kuzatuv cookie’lari yoʻq.","Kesh: brauzer sahifa fayllarini tezroq yuklash uchun oʻz keshida saqlashi mumkin. Bu maʼlumot faqat sizning qurilmangizda turadi.","Maʼlumot qayerda saqlanadi: tanlovlar sizning qurilmangizda, brauzer ichida. Serverga yuborilmaydi. Parol tekshiruvi va soat ham brauzerda ishlaydi.","Aloqa tugmalari: bosganingizda tegishli ilova yoki sayt ochiladi. Saytning oʻzida hech narsa saqlanmaydi.","Oʻchirish: brauzer sozlamalarida «Sayt maʼlumotlari / kesh»ni tozalang."]},
-ru:{h1:"Технологии и безопасность — на практике",hp:"Techsharipov — IT-портал по кибербезопасности, созданный Шариповым Одилбеком. Курсы, компьютерные услуги и цифровые инструменты в одном месте.",tw:"Чем мы занимаемся",lw:"Основные направления работы портала.",tc:"Курсы",lc:"Нажмите на направление — откроется полная программа. Темы составлены по общим учебным программам из открытых источников.",tx:"Дополнительные курсы",lx:"На рекламной основе. Подробности — в Telegram.",tt:"Контакты",lt:"Нажмите кнопку, чтобы связаться.",cbn:"Связаться",buy:"Получить подробности о курсе",hi:"Здравствуйте! Хочу получить подробности о курсе: ",kl:"Проверка",kt:"Проверьте свою кибербезопасность",ks:"Проверьте пароль и ответьте на 5 вопросов. Всё выполняется в браузере, ничего не отправляется.",ke:"Введите пароль",kn:"Результат",kr:["Высокий риск. Сначала включите двухфакторную защиту и разные пароли.","Хорошо, но стоит укрепить защиту.","Отлично! Продолжайте в том же духе."],ki:["Для каждого аккаунта свой пароль","Включена двухфакторная защита (2FA)","Обновляю устройства и программы","Есть резервная копия важных данных","Не открываю незнакомые ссылки"],v:["Очень слабый","Слабый","Средний","Хороший","Очень надёжный"],tip:{len:"Используйте не менее 12 символов.",mix:"Смешайте заглавные и строчные буквы, цифры и символы.",seq:"Избегайте простых последовательностей и популярных паролей."},cke:"Сайт хранит в браузере только выбор языка и темы. Рекламных cookie нет.",ckb:"Принимаю",au:"Автор: Шарипов Одилбек",home:"Главная",work:"Работы",extra:"Дополнительно",contact:"Контакты",out:"Результат",more:"Подробнее в Telegram",ad:"На рекламной основе",
-W:[["🎓","Учебные курсы","Практические уроки по кибербезопасности, AI, IT, Word и Windows."],["🪟","Установка Windows","Установка версий 7, 8, 10 и 11, официальная активация."],["🛡️","Цифровая безопасность","Консультации по защите аккаунтов, паролей и сетей."],["🤖","Боты и веб","Python-Telegram боты, лендинги и Mini-App."],["🔧","Компьютерный сервис","Диагностика: блоки, ноутбуки, охлаждение, диски, сеть."]],
-C:[["🛡️","Кибербезопасность","Защита данных, аккаунтов и сетей","Кибербезопасность — практика защиты личных и корпоративных данных от атак. Курс рассчитан на обычного пользователя.",["Фишинг и социальная инженерия","Пароли, менеджер паролей, двухфакторная защита","Вредоносное ПО и антивирус","Безопасность Wi-Fi и VPN","Резервные копии и шифрование","Основы реагирования на инциденты"],"Результат: распознаёт ежедневные цифровые угрозы и умеет защититься."],
-["🤖","Искусственный интеллект (AI)","Современные AI-инструменты и автоматизация","Как работают большие языковые модели и как эффективно использовать их в работе.",["Основы языковых моделей","Промпт-инжиниринг","AI для текста, анализа и изображений","Автоматизация рабочих процессов","Контроль ошибок и конфиденциальности"],"Результат: безопасно и эффективно применяет AI в работе."],
-["💻","Основы IT и сетей","Компьютер, локальная сеть, DNS","Устройство компьютера, принципы работы сетей и основы администрирования.",["Процессор, память, диск","Основы операционных систем","IP-адреса и локальная сеть","DNS, DHCP и маршрутизация","Настройка роутера и Wi-Fi","Поиск неисправностей: ping, tracert"],"Результат: настраивает сеть и устраняет простые неисправности."],
-["📝","Microsoft Office Word","Официальные документы и форматирование","Правильное оформление документов, быстрая работа со стилями и шаблонами.",["Настройка страницы и стилей","Заголовки и автооглавление","Таблицы и изображения","Колонтитулы и номера страниц","Слияние для рассылки","Рецензирование и экспорт в PDF"],"Результат: готовит документы профессионального вида."],
-["🪟","Установка Windows","7 / 8 / 10 / 11 и активация","Установка системы с нуля, драйверы и официальная активация.",["Требования и подготовка","Создание загрузочной USB","Разделы диска","Драйверы и обновления","Активация по официальной лицензии","Оптимизация и резервная копия"],"Результат: самостоятельно устанавливает и настраивает Windows."]],
-X:[["Python и Telegram-боты","Создание ботов для заказов, отчётов и других задач."],["Сайты и Mini-App","Лендинги, веб-приложения и онлайн-визитки."],["Диагностика компьютеров","Практическая проверка устройств и сервис."]],
-fine:["О cookie, кеше и данных","Cookie и localStorage: сайт сохраняет в localStorage браузера только выбор языка (lang), темы (theme) и отметку о принятии уведомления о cookie (ck). Рекламных и отслеживающих cookie нет.","Кеш: браузер может хранить файлы страницы в своём кеше для быстрой загрузки. Эти данные находятся только на вашем устройстве.","Где хранятся данные: выбор хранится на вашем устройстве, в браузере, и не отправляется на сервер. Проверка пароля и часы работают в браузере.","Кнопки связи: по нажатию открывается нужное приложение или сайт. На самом сайте ничего не сохраняется.","Удаление: очистите «данные сайтов / кеш» в настройках браузера."]},
-en:{h1:"Technology and security, hands on",hp:"Techsharipov is an IT and cybersecurity portal created by Sharipov Odilbek. Courses, computer services and digital tools in one place.",tw:"What we do",lw:"The main lines of work on the portal.",tc:"Courses",lc:"Tap a track to open its full programme. Topics follow general curricula found in open sources.",tx:"Extra courses",lx:"Offered on an advertising basis. Get details on Telegram.",tt:"Contact",lt:"Tap the button to get in touch.",cbn:"Get in touch",buy:"Get the full course details",hi:"Hello! I’d like details about the course: ",kl:"Check",kt:"Check your cybersecurity",ks:"Test a password and answer 5 questions. Everything runs in your browser and nothing is sent.",ke:"Enter a password",kn:"Result",kr:["High risk. Start with two-factor authentication and unique passwords.","Good, but a little more hardening is needed.","Excellent! Keep up your habits."],ki:["I use a separate password for every account","Two-factor authentication (2FA) is on","I keep devices and apps updated","My important data is backed up","I don’t open unknown links"],v:["Very weak","Weak","Fair","Good","Very strong"],tip:{len:"Use at least 12 characters.",mix:"Mix upper and lower case, digits and symbols.",seq:"Avoid simple sequences and popular passwords."},cke:"This site only stores your language and theme choice in your browser. No advertising cookies.",ckb:"Accept",au:"Author: Sharipov Odilbek",home:"Home",work:"Work",extra:"Extra",contact:"Contact",out:"Outcome",more:"Details on Telegram",ad:"Advertising basis",
-W:[["🎓","Training courses","Hands-on lessons in cybersecurity, AI, IT, Word and Windows."],["🪟","Windows installation","Install versions 7, 8, 10 and 11 with official activation."],["🛡️","Digital security","Advice on protecting accounts, passwords and networks."],["🤖","Bots and web","Python-Telegram bots, landing pages and Mini-Apps."],["🔧","Computer service","Diagnostics: system units, laptops, cooling, drives, network."]],
-C:[["🛡️","Cybersecurity","Protect data, accounts and networks","Cybersecurity is the practice of protecting personal and organisational data from attacks. The course is aimed at everyday users.",["Phishing and social engineering","Passwords, password managers, two-factor authentication","Malware and antivirus","Wi-Fi and VPN safety","Backups and encryption","Incident response basics"],"Outcome: recognises everyday digital threats and can defend against them."],
-["🤖","Artificial intelligence (AI)","Modern AI tools and automation","How large language models work and how to use them effectively at work.",["Language model basics","Prompt engineering","AI for text, analysis and images","Workflow automation","Checking errors and privacy"],"Outcome: uses AI tools safely and effectively at work."],
-["💻","IT and networking basics","Computer, LAN, DNS","How computers and networks work, plus the basics of system administration.",["CPU, memory, storage","Operating system basics","IP addressing and LAN","DNS, DHCP and routing","Router and Wi-Fi setup","Troubleshooting: ping, tracert"],"Outcome: configures a network and fixes simple faults."],
-["📝","Microsoft Office Word","Official documents and formatting","Structuring documents correctly and working fast with styles and templates.",["Page setup and styles","Headings and automatic table of contents","Tables and images","Headers, footers and page numbers","Mail merge","Track changes and PDF export"],"Outcome: produces professional-looking documents."],
-["🪟","Windows installation","7 / 8 / 10 / 11 and activation","Installing the system from scratch, drivers and official activation.",["Requirements and preparation","Creating a bootable USB drive","Disk partitions","Drivers and updates","Activation with an official licence","Optimisation and backup"],"Outcome: installs and configures Windows independently."]],
-X:[["Python and Telegram bots","Building bots for orders, reports and other tasks."],["Websites and Mini-Apps","Landing pages, web apps and online business cards."],["Computer diagnostics","Hands-on device checks and service."]],
-fine:["About cookies, cache and data","Cookies and localStorage: the site stores only your language (lang) and theme (theme) choice, plus a note that you accepted the cookie notice (ck) in your browser’s localStorage. There are no advertising or tracking cookies.","Cache: your browser may keep page files in its cache to load faster. That data stays on your device only.","Where data is stored: choices stay on your device, inside the browser, and are not sent to a server. The password check and the clock run in the browser.","Contact buttons: tapping one opens the matching app or site. Nothing is stored on this site itself.","Removal: clear “site data / cache” in your browser settings."]}
-};
-var lang="uz",TG="https://t.me/B1techuz";
-function S(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
-function render(){
-  var t=L[lang];
-  document.documentElement.lang=lang;
-  document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.dataset.i]});
-  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===lang)});
-  var it=[["home","🏠",t.home],["work","🛠️",t.work],["check","🔐",t.kl]].concat(t.C.map(function(c,i){return["c"+i,c[0],c[1]]})).concat([["extra","📢",t.extra],["contact","📞",t.contact]]);
-  document.getElementById("nav").innerHTML='<button class="x" id="xc" aria-label="Close">✕</button><div class="si">'+it.map(function(a){return'<a class="g" href="#'+a[0]+'" data-go="'+a[0]+'"><span>'+a[1]+'</span><span>'+a[2]+'</span></a>'}).join("")+'</div>';
-  document.getElementById("wg").innerHTML=t.W.map(function(w){return'<div class="card g"><div class="ic">'+w[0]+'</div><h3>'+w[1]+'</h3><p>'+w[2]+'</p></div>'}).join("");
-  var open={};document.querySelectorAll("details.c").forEach(function(d){if(d.open)open[d.id]=1});
-  document.getElementById("cl").innerHTML=t.C.map(function(c,i){return'<details class="c g" id="c'+i+'"'+(open["c"+i]?" open":"")+'><summary><span class="ic">'+c[0]+'</span><span class="t"><b>'+c[1]+'</b><span>'+c[2]+'</span></span></summary><div class="body"><p>'+c[3]+'</p><ul>'+c[4].map(function(x){return'<li>'+x+'</li>'}).join("")+'</ul><p class="res">'+c[5]+'</p><button class="btn" data-buy="'+c[1]+'">'+t.buy+'</button></div></details>'}).join("");
-  document.getElementById("xg").innerHTML=t.X.map(function(x){return'<div class="card g"><span class="tag">'+t.ad+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p><p style="margin-top:10px"><button class="btn alt" data-buy="'+x[0]+'">'+t.more+'</button></p></div>'}).join("");
-  document.getElementById("fine").innerHTML="<p><b>"+t.fine[0]+"</b></p>"+t.fine.slice(1).map(function(x){return"<p>"+x+"</p>"}).join("");
-  qr();chk();S("lang",lang);
-}
-document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){lang=b.dataset.l;render()}});
-var th=S("theme");if(th)document.documentElement.dataset.theme=th;
-document.getElementById("th").onclick=function(){var d=document.documentElement,dk=d.dataset.theme?d.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;d.dataset.theme=dk?"light":"dark";S("theme",d.dataset.theme)};
-function tick(){var d=new Date(Date.now()+5*36e5),p=function(n){return String(n).padStart(2,"0")};document.getElementById("clock").innerHTML="<small>GMT+5</small>"+p(d.getUTCHours())+":"+p(d.getUTCMinutes())+":"+p(d.getUTCSeconds())}
+(function(){try{
+var t=document.getElementById("t");function p(n){return n<10?"0"+n:""+n}
+function tick(){var x=new Date(Date.now()+5*36e5);t.textContent=p(x.getUTCHours())+":"+p(x.getUTCMinutes())+":"+p(x.getUTCSeconds())}
 tick();setInterval(tick,1000);
-var Q=[0,0,0,0,0];
-function qr(){var t=L[lang];document.getElementById("ql").innerHTML=t.ki.map(function(x,i){return'<label class="q"><input type="checkbox" data-q="'+i+'"'+(Q[i]?" checked":"")+'><span>'+x+'</span></label>'}).join("");qs()}
-function qs(){var t=L[lang],n=Q.reduce(function(a,b){return a+b},0),i=n<3?0:n<5?1:2,e=document.getElementById("qs");e.textContent=t.kn+": "+n+"/5 — "+t.kr[i];e.style.color=["#e5484d","#f5a524","#30a46c"][i]}
-document.getElementById("ql").addEventListener("change",function(e){var q=e.target.dataset.q;if(q!==undefined){Q[q]=e.target.checked?1:0;qs()}});
-function chk(){var p=document.getElementById("pw").value,t=L[lang],bar=document.getElementById("bar"),v=document.getElementById("verdict"),u=document.getElementById("tips");u.innerHTML="";if(!p){bar.style.width="0";v.textContent=t.ke;v.style.color="var(--mut)";return}var c=/[a-zа-я]/.test(p)+/[A-ZА-Я]/.test(p)+/\d/.test(p)+/[^\w\sа-яА-Я]/.test(p),q=/(.)\1{2,}|0123|1234|2345|3456|abcd|qwer|asdf|parol|password|admin/i.test(p),s=Math.min(p.length,16)/16*50+c*12;if(q)s-=25;if(new Set(p).size<p.length/2)s-=15;s=Math.max(0,Math.min(100,s));var i=s<20?0:s<40?1:s<60?2:s<80?3:4,k=["#e5484d","#e5484d","#f5a524","#30a46c","#30a46c"][i];bar.style.width=Math.max(8,s)+"%";bar.style.background=k;v.textContent=t.v[i];v.style.color=k;if(p.length<12)u.innerHTML+="<li>"+t.tip.len+"</li>";if(c<3)u.innerHTML+="<li>"+t.tip.mix+"</li>";if(q)u.innerHTML+="<li>"+t.tip.seq+"</li>"}
-document.getElementById("pw").addEventListener("input",chk);
-function menu(o){var n=document.getElementById("nav");n.classList.toggle("on",o);document.getElementById("ham").setAttribute("aria-expanded",o);document.body.style.overflow=o?"hidden":"";var first=n.querySelector("a");if(o&&first)first.focus()}
-document.getElementById("ham").onclick=function(){menu(true)};
-document.addEventListener("keydown",function(e){if(e.key==="Escape")menu(false)});
-document.getElementById("nav").addEventListener("click",function(e){var a=e.target.closest("a[data-go]");if(a){e.preventDefault();var id=a.dataset.go,el=document.getElementById(id);menu(false);if(el){if(/^c\d$/.test(id))el.open=true;setTimeout(function(){el.scrollIntoView({behavior:"smooth",block:"start"})},60)}}else if(e.target.closest("#xc"))menu(false)});
-var K={tg:TG,wa:"https://wa.me/79017027277",ig:"https://instagram.com/_the_lifeuz",ml:"mailto:odilbeksharipov95@gmail.com"};
-function go(k,m){var u=K[k];if(!u)return;if(k==="ml")location.href=u;else{if(m&&k==="tg")u+="?text="+encodeURIComponent(m);window.open(u,"_blank","noopener")}}
-document.addEventListener("click",function(e){var buyBtn=e.target.closest("[data-buy]"),socBtn=e.target.closest("[data-k]");if(buyBtn)go("tg",L[lang].hi+buyBtn.dataset.buy);if(socBtn)go(socBtn.dataset.k)});
-document.getElementById("cb").onclick=function(){var r=document.getElementById("cr"),o=r.hidden;r.hidden=!o;this.setAttribute("aria-expanded",o)};
-if(!S("ck"))setTimeout(function(){document.getElementById("ckn").hidden=false},700);
-document.getElementById("ckb").onclick=function(){S("ck","1");document.getElementById("ckn").hidden=true};
-var sl=S("lang");if(L[sl])lang=sl;render();
+var q=document.getElementById("q"),cs=document.querySelectorAll(".c");
+q.addEventListener("input",function(){var v=q.value.toLowerCase().trim();for(var i=0;i<cs.length;i++){cs[i].hidden=!!v&&cs[i].textContent.toLowerCase().indexOf(v)<0}});
+var m=document.getElementById("mt"),as=document.querySelectorAll(".side a");
+for(var j=0;j<as.length;j++)as[j].addEventListener("click",function(){m.checked=false});
+var k=document.getElementById("ck");
+try{if(!localStorage.getItem("ck"))setTimeout(function(){k.hidden=false},700)}catch(e){}
+document.getElementById("ok").onclick=function(){try{localStorage.setItem("ck","1")}catch(e){}k.hidden=true};
+var D={"Kurslar": "Курсы|Courses|Kurslar", "Bosh sahifa": "Главная|Home|Bas bet", "IT va kiberxavfsizlik": "IT и кибербезопасность|IT and cybersecurity|IT hám kiberqáwipsizlik", "Windows kurslari": "Курсы Windows|Windows courses|Windows kurslari", "Ingliz tili va sertifikatlar": "Английский язык и сертификаты|English and certificates|Inglis tili hám sertifikatlar", "Rus tili": "Русский язык|Russian language|Rus tili", "Tarix": "История|History|Tariyx", "Matematika": "Математика|Mathematics|Matematika", "Qoʻshimcha kurslar": "Дополнительные курсы|Extra courses|Qosımsha kurslar", "Treyding": "Трейдинг|Trading|Treyding", "Onlayn shop": "Онлайн-магазин|Online shop|Onlayn dúkan", "Yordam va qoʻllab-quvvatlash": "Помощь и поддержка|Help and support|Járdem hám qollap-quwatlaw", "Qiziqarli maʼlumotlar": "Интересные факты|Interesting facts|Qızıqlı maǵlıwmatlar", "Aloqa": "Контакты|Contact|Baylanıs", "Cookie va maxfiylik": "Cookie и конфиденциальность|Cookies and privacy|Cookie hám jasırınlıq", "taʼlim portali": "образовательный портал|education portal|bilimlendiriw portalı", "Xush kelibsiz!": "Добро пожаловать!|Welcome!|Xosh keldińiz!", "IT va kiber­xavfsizlik": "IT и кибер~безопасность|IT and cyber~security|IT hám kiber~qáwipsizlik", "Ingliz tili va sertifikat": "Английский и сертификаты|English and certificates|Inglis tili hám sertifikat", "TAʼLIM / 2026": "ОБРАЗОВАНИЕ / 2026|EDUCATION / 2026|BILIMLENDIRIW / 2026", "Bilim va xavfsizlik — bir joyda": "Знания и безопасность — в одном месте|Knowledge and security in one place|Bilim hám qáwipsizlik — bir jerde", "IT’dan tarixgacha, tildan treydinggacha": "От IT до истории, от языков до трейдинга|From IT to history, from languages to trading|IT den tariyxqa, tilden treydingge shekem", "YOʻNALISH": "НАПРАВЛЕНИЙ|DIRECTIONS|BAǴDAR", "ta kurs": "курсов|courses|kurs", "Koʻp kiberhujumlar fishing xati orqali boshlanadi.": "Многие кибератаки начинаются с фишингового письма.|Many cyberattacks start with a phishing email.|Kóp kiberhújimler fishing xat arqalı baslanadı.", "IELTS natijasi 0 dan 9 gacha ball bilan baholanadi.": "Результат IELTS оценивается баллами от 0 до 9.|IELTS results are scored from 0 to 9.|IELTS nátiyjesi 0 den 9 ǵa shekem ball menen bahalanadı.", "Amir Temur 1336-yilda tugʻilgan.": "Амир Темур родился в 1336 году.|Amir Temur was born in 1336.|Ámir Temur 1336-jılı tuwılǵan.", "Kurslarni koʻrish →": "Смотреть курсы →|View courses →|Kurslardı kóriw →", "Sertifikatlar": "Сертификаты|Certificates|Sertifikatlar", "Ingliz tili kursida CEFR darajalari (A1–C2) va IELTS formatiga tayyorgarlik beriladi. Kurs yakunida oʻz darajangizni aniq bilib olasiz.": "На курсе английского вы готовитесь по уровням CEFR (A1–C2) и формату IELTS. В конце курса вы точно узнаете свой уровень.|The English course covers CEFR levels (A1–C2) and IELTS format preparation. By the end you will know your level precisely.|Inglis tili kursında CEFR dárejeleri (A1–C2) hám IELTS formatına tayarlıq beriledi. Kurs juwmaǵında óz dárejeńizdi anıq bilip alasız.", "Batafsil maʼlumot →": "Подробнее →|More details →|Batafsıl maǵlıwmat →", "Maʼlumot, akkaunt va tarmoqni himoya qilish.": "Защита данных, аккаунтов и сетей.|Protecting data, accounts and networks.|Maǵlıwmat, akkaunt hám tarmaqtı qorǵaw.", "Batafsil": "Подробнее|Details|Batafsıl", "Fishing": "Фишинг|Phishing|Fishing", "Parol va 2FA": "Пароли и 2FA|Passwords and 2FA|Parol hám 2FA", "Wi-Fi va VPN": "Wi-Fi и VPN|Wi-Fi and VPN|Wi-Fi hám VPN", "Zaxira nusxa": "Резервные копии|Backups|Zapas nusqa", "Tarmoq asoslari": "Основы сетей|Networking basics|Tarmaq tiykarları", "💡 Koʻp hujumlar texnikadan emas, fishing xatiga ishonishdan boshlanadi.": "💡 Многие атаки начинаются не с техники, а с доверия к фишинговому письму.|💡 Many attacks begin not with technology but with trusting a phishing email.|💡 Kóp hújimler texnikadan emes, fishing xatqa isenıwden baslanadı.", "Batafsil kursni olish": "Подробности о курсе|Get course details|Kurs haqqında batafsıl alıw", "7, 8, 10 va 11 ni oʻrnatish va sozlash.": "Установка и настройка 7, 8, 10 и 11.|Installing and configuring 7, 8, 10 and 11.|7, 8, 10 hám 11 di ornatıw hám sazlaw.", "Yuklanuvchi USB": "Загрузочная USB|Bootable USB|Júklenetuǵın USB", "Disk boʻlimlari": "Разделы диска|Disk partitions|Disk bólimleri", "Drayverlar": "Драйверы|Drivers|Drayverler", "Rasmiy aktivatsiya": "Официальная активация|Official activation|Rásmiy aktivaciya", "💡 Windows 10 uchun oddiy xavfsizlik yangilanishlari 2025-yil 14-oktyabrda tugagan.": "💡 Обычные обновления безопасности для Windows 10 закончились 14 октября 2025 года.|💡 Regular security updates for Windows 10 ended on 14 October 2025.|💡 Windows 10 ushın ádettegi qáwipsizlik jańalanıwları 2025-jıl 14-oktyabrde tamamlanǵan.", "Speaking, grammatika va IELTS/CEFR tayyorlov.": "Speaking, грамматика и подготовка к IELTS/CEFR.|Speaking, grammar and IELTS/CEFR preparation.|Speaking, grammatika hám IELTS/CEFR tayarlıq.", "A1–C2 darajalar": "Уровни A1–C2|Levels A1–C2|A1–C2 dárejeler", "💡 IELTS 4 bo‘limdan iborat va natija 0–9 ball shkalasida beriladi.": "💡 IELTS состоит из 4 разделов, результат — по шкале 0–9.|💡 IELTS has 4 sections and results are given on a 0–9 scale.|💡 IELTS 4 bólimnen ibarat, nátiyje 0–9 ball shkalasında beriledi.", "Grammatika, imlo va ravon nutq.": "Грамматика, орфография и свободная речь.|Grammar, spelling and fluent speech.|Grammatika, orfografiya hám erkin sóylew.", "Alifbo va oʻqish": "Алфавит и чтение|Alphabet and reading|Álipbe hám oqıw", "Grammatika": "Грамматика|Grammar|Grammatika", "Imlo": "Орфография|Spelling|Orfografiya", "Soʻzlashuv": "Разговорная речь|Speaking practice|Sóylesiw", "Yozma ish": "Письменная работа|Written work|Jazba jumıs", "💡 Rus alifbosida 33 ta harf bor.": "💡 В русском алфавите 33 буквы.|💡 The Russian alphabet has 33 letters.|💡 Rus álipbesinde 33 hárip bar.", "Jahon va Oʻzbekiston tarixi, sanalar bilan ishlash.": "Всемирная история и история Узбекистана, работа с датами.|World and Uzbekistan history, working with dates.|Dúnya hám Ózbekstan tariyxı, sanalar menen islew.", "Qadimgi davr": "Древний период|Ancient era|Áyyemgi dáwir", "Ipak yoʻli": "Шёлковый путь|Silk Road|Jibek jolı", "Temuriylar": "Тимуриды|The Timurids|Temuriyler", "Yangi davr": "Новое время|Modern era|Jańa dáwir", "Test mashqlari": "Тестовые задания|Practice tests|Test shınıǵıwları", "💡 Amir Temur 1336-yilda Kesh yaqinida tugʻilgan.": "💡 Амир Темур родился в 1336 году близ Кеша.|💡 Amir Temur was born in 1336 near Kesh.|💡 Ámir Temur 1336-jılı Kesh janında tuwılǵan.", "Algebra va geometriya, masala yechish usullari.": "Алгебра и геометрия, методы решения задач.|Algebra and geometry, problem-solving methods.|Algebra hám geometriya, másele sheshiw usılları.", "Tenglamalar": "Уравнения|Equations|Teńlemeler", "Funksiyalar": "Функции|Functions|Funkciyalar", "Geometriya": "Геометрия|Geometry|Geometriya", "Foizlar": "Проценты|Percentages|Procentler", "Masalalar": "Задачи|Problems|Máseleler", "💡 Pifagor teoremasi: to‘g‘ri burchakli uchburchakda a² + b² = c².": "💡 Теорема Пифагора: в прямоугольном треугольнике a² + b² = c².|💡 Pythagorean theorem: in a right triangle, a² + b² = c².|💡 Pifagor teoreması: tuwrı múyeshli úshmúyeshlikte a² + b² = c².", "Moliya bozori asoslari va xavfni boshqarish.": "Основы финансового рынка и управление рисками.|Financial market basics and risk management.|Finans bazarı tiykarları hám táwekelshilikti basqarıw.", "Bozor turlari": "Виды рынков|Market types|Bazar túrleri", "Grafik oʻqish": "Чтение графиков|Reading charts|Grafik oqıw", "Risk-menejment": "Риск-менеджмент|Risk management|Táwekel-menejment", "Demo hisob": "Демо-счёт|Demo account|Demo esap", "⚠️ Treyding yuqori xavfli: mablagʻni yoʻqotish mumkin, foyda kafolatlanmaydi.": "⚠️ Трейдинг связан с высоким риском: средства можно потерять, прибыль не гарантируется.|⚠️ Trading is high-risk: you can lose money and profit is not guaranteed.|⚠️ Treyding joqarı táwekelli: qarjıdan ayırılıw múmkin, payda kepillenbeydi.", "Onlayn shop magazin": "Интернет-магазин|Online store|Onlayn shop dúkan", "Onlayn doʻkon ochish va sotuvni yoʻlga qoʻyish.": "Открытие интернет-магазина и налаживание продаж.|Opening an online store and setting up sales.|Onlayn dúkan ashıw hám satıwdı jolǵa qoyıw.", "Mahsulot tanlash": "Выбор товара|Choosing products|Ónim tańlaw", "Doʻkon yaratish": "Создание магазина|Creating a store|Dúkan jaratıw", "Rasm va tavsif": "Фото и описание|Photos and descriptions|Súwret hám táriyip", "Narx va marja": "Цена и маржа|Price and margin|Baha hám marja", "Reklama": "Реклама|Advertising|Reklama", "Yetkazib berish": "Доставка|Delivery|Jetkizip beriw", "💡 Aniq rasm va tushunarli tavsif xaridor qaroriga katta taʼsir qiladi.": "💡 Чёткое фото и понятное описание сильно влияют на решение покупателя.|💡 A clear photo and description strongly influence a buyer’s decision.|💡 Anıq súwret hám túsinikli táriyip alıwshınıń qararına úlken tásir etedi.", "Telegram orqali bogʻlaning": "Свяжитесь через Telegram|Contact us on Telegram|Telegram arqalı baylanısıń", "Kurslar, narxlar va yozilish boʻyicha savollarni Telegramda yozing.": "Пишите в Telegram по вопросам курсов, цен и записи.|Write on Telegram about courses, prices and enrollment.|Kurslar, bahalar hám jazılıw boyınsha sorawlardı Telegramda jazıń.", "Telegramni ochish": "Открыть Telegram|Open Telegram|Telegramdı ashıw", "Cookie, kesh va maʼlumotlar haqida": "О cookie, кеше и данных|About cookies, cache and data|Cookie, kesh hám maǵlıwmatlar haqqında", "Cookie va localStorage: sayt faqat cookie xabarini qabul qilganingizni (ck) va tanlangan tilni (lang) brauzeringizning localStorage xotirasida saqlaydi. Reklama yoki kuzatuv cookie’lari yoʻq.": "Cookie и localStorage: сайт сохраняет в localStorage браузера только отметку о принятии уведомления о cookie (ck) и выбранный язык (lang). Рекламных и отслеживающих cookie нет.|Cookies and localStorage: the site only stores, in your browser’s localStorage, a note that you accepted the cookie notice (ck) and your chosen language (lang). There are no advertising or tracking cookies.|Cookie hám localStorage: sayt tek cookie xabarın qabıllaǵanıńızdı (ck) hám tańlaǵan tilińizdi (lang) brauzerińizdiń localStorage jadında saqlaydı. Reklama yamasa baqlaw cookie’leri joq.", "Kesh: brauzer sahifa fayllarini tezroq yuklash uchun oʻz keshida saqlashi mumkin. Bu maʼlumot faqat sizning qurilmangizda turadi.": "Кеш: браузер может хранить файлы страницы в своём кеше для быстрой загрузки. Эти данные находятся только на вашем устройстве.|Cache: your browser may keep page files in its cache to load faster. That data stays on your device only.|Kesh: brauzer bet faylların tezirek júklew ushın óz keshinde saqlawı múmkin. Bul maǵlıwmat tek sizdiń qurılmańızda turadı.", "Maʼlumot qayerda saqlanadi: tanlovlar sizning qurilmangizda, brauzer ichida. Serverga yuborilmaydi. Qidiruv va soat brauzerda ishlaydi.": "Где хранятся данные: выбор хранится на вашем устройстве, в браузере, и не отправляется на сервер. Поиск и часы работают в браузере.|Where data is stored: choices stay on your device, inside the browser, and are not sent to a server. Search and the clock run in the browser.|Maǵlıwmat qayerde saqlanadı: tańlawlar sizdiń qurılmańızda, brauzer ishinde. Serverge jiberilmeydi. Izlew hám saat brauzerde isleydi.", "Aloqa tugmalari: bosganingizda Telegram ochiladi. Saytning oʻzida hech narsa saqlanmaydi.": "Кнопки связи: по нажатию открывается Telegram. На самом сайте ничего не сохраняется.|Contact buttons: tapping one opens Telegram. Nothing is stored on this site itself.|Baylanıs túymeleri: basqanıńızda Telegram ashıladı. Saytta ózinde hesh nárse saqlanbaydı.", "Oʻchirish: brauzer sozlamalarida «Sayt maʼlumotlari / kesh»ni tozalang.": "Удаление: очистите «данные сайтов / кеш» в настройках браузера.|Removal: clear “site data / cache” in your browser settings.|Óshiriw: brauzer sazlawlarında «Sayt maǵlıwmatları / kesh»ti tazalań.", "techsharipov.uz · © 2026 · Muallif: Sharipov Odilbek": "techsharipov.uz · © 2026 · Автор: Шарипов Одилбек|techsharipov.uz · © 2026 · Author: Sharipov Odilbek|techsharipov.uz · © 2026 · Avtor: Sharipov Odilbek", "Sayt faqat cookie xabarini qabul qilganingizni va tanlangan tilni brauzer xotirasida saqlaydi. Reklama cookie’lari yoʻq.": "Сайт хранит в браузере только отметку о принятии уведомления о cookie и выбранный язык. Рекламных cookie нет.|The site only stores in your browser a note that you accepted the cookie notice and your chosen language. No advertising cookies.|Sayt tek cookie xabarın qabıllaǵanıńızdı hám tańlaǵan tilińizdi brauzer jadında saqlaydı. Reklama cookie’leri joq.", "Qabul qilaman": "Принимаю|Accept|Qabıllayman"},PH=["Найдите курс, например — Windows","Search courses, e.g. Windows","Kurs izleń, mısalı — Windows"],GR=["Здравствуйте! Подробности о курсе: ","Hello! Details about the course: ","Assalawma áleykum! Kurs haqqında batafsıl: "],UZPH=q.placeholder,UZGR="Assalomu alaykum! Kurs haqida batafsil: ";
+var W=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),NS=[],nd;
+while(nd=W.nextNode()){var pn=nd.parentNode.nodeName;if(pn==="SCRIPT"||pn==="STYLE")continue;var m0=nd.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);if(m0[2]&&/[A-Za-zА-Яа-я]/.test(m0[2]))NS.push([nd,m0[1],m0[2],m0[3]])}
+var LI={uz:-1,ru:0,en:1,qq:2},LC={uz:"uz",ru:"ru",en:"en",qq:"kaa"};
+function setL(l){
+ var i=LI[l];
+ NS.forEach(function(e){var v=e[2];if(i>=0&&D[v]){var x=D[v].split("|")[i];if(x)v=x.replace(/~/g,"\u00ad")}e[0].nodeValue=e[1]+v+e[3]});
+ q.placeholder=i<0?UZPH:PH[i];
+ var g=i<0?UZGR:GR[i],tg=document.querySelectorAll("a.tg");
+ for(var a=0;a<tg.length;a++)tg[a].href="https://t.me/B1techuz?text="+encodeURIComponent(g+tg[a].parentNode.querySelector("h3").textContent);
+ document.documentElement.lang=LC[l];
+ var bs=document.querySelectorAll(".lang button");for(var b=0;b<bs.length;b++)bs[b].setAttribute("aria-pressed",bs[b].dataset.l===l);
+ try{localStorage.setItem("lang",l)}catch(e){}
+}
+var lb=document.querySelectorAll(".lang button");
+for(var c=0;c<lb.length;c++)lb[c].addEventListener("click",function(){setL(this.dataset.l)});
+var sl=null;try{sl=localStorage.getItem("lang")}catch(e){}
+if(sl&&LI[sl]!==undefined&&sl!=="uz")setL(sl);
+}catch(e){}})();
 </script>
 </body>
 </html>
